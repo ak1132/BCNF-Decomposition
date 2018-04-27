@@ -33,6 +33,7 @@ public class Main {
 
 		// System.out.println("Relation : " + relation.toString());
 		// System.out.println("Violation : " + violation.toString());
+		// System.out.println("All Fds for the current relation:\n" + fds.toString());
 
 		Relation x = violation.getLHS();
 
@@ -49,8 +50,8 @@ public class Main {
 
 		relList.remove(relation);
 
-		// System.out.println("Decomposed to " + xy.toString() + " and " +
-		// xz.toString());
+		// System.out.println("Decomposed to " + xy.toString() + " and " + xz.toString()
+		// + "\n");
 		checkBcnf(xyFds, xy, relList);
 		checkBcnf(xzFds, xz, relList);
 
@@ -59,7 +60,7 @@ public class Main {
 	public static FdList project(FdList oldFds, Relation newRelation, Relation change)
 			throws CloneNotSupportedException {
 		FdList newFds = new FdList();
-		Set<Relation> powerSet = newRelation.getPowerSets();
+		List<Relation> powerSet = newRelation.getPowerSets();
 		Iterator<Relation> it = powerSet.iterator();
 		while (it.hasNext()) {
 			Relation powerRel = it.next();
@@ -78,7 +79,7 @@ public class Main {
 		try {
 
 			br = new BufferedReader(
-					new FileReader(new File("filePath")));
+					new FileReader(new File("C:\\Users\\Shinigami\\eclipse-workspace\\Db Proj 2\\src\\input2")));
 
 			String strLine = br.readLine();
 
@@ -102,8 +103,9 @@ public class Main {
 			}
 
 			System.out.println("Relation : " + relList);
+			System.out.println("Functional dependencies : \n" + fdList);
 
-			Set<Relation> powerSet = relList.getFirst().getPowerSets();
+			List<Relation> powerSet = relList.getFirst().getPowerSets();
 
 			Iterator<Relation> it = powerSet.iterator();
 
@@ -127,7 +129,7 @@ public class Main {
 				}
 			}
 
-			System.out.println("\nThe output of BCNF Decomposition:\n");
+			System.out.print("\nThe relations after BCNF Decomposition: ");
 
 			Set<Relation> output = new HashSet<Relation>();
 			checkBcnf(newFds, relList.getFirst(), output);
@@ -141,7 +143,7 @@ public class Main {
 				prev = out.toString();
 			}
 			String outp = sb.length() > 0 ? sb.substring(0, sb.length() - 1) : "";
-			System.out.println("[" + outp + "]");
+			System.out.println("{" + outp + "}");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

@@ -88,9 +88,9 @@ public class Relation implements Cloneable {
 		return null;
 	}
 
-	public Set<Relation> getPowerSets() {
+	public List<Relation> getPowerSets() {
 		List<Character> charSet = new ArrayList<Character>(getCharSet(this.a));
-		Set<Relation> powerSet = new HashSet<>();
+		List<Relation> powerSet = new ArrayList<>();
 		int n = charSet.size();
 
 		for (int i = 0; i < (1 << n); i++) {
