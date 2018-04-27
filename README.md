@@ -9,47 +9,47 @@ D -> B E
 
 Output:
 
-Relation : ABCDE
+Relation : ABCDE<br/>
 
-The list of non trivial dependencies : 
-CDE -> B
-AB -> CDE
-AD -> BCE
-CE -> BD
-BCE -> D
-DE -> B
-D -> BE
-BD -> E
-ABCD -> E
-ABDE -> C
-ABD -> CE
-AC -> BDE
-BCD -> E
-CD -> BE
-ABC -> DE
-ADE -> BC
-ACD -> BE
-ABE -> CD
-ACDE -> B
-BC -> DE
-C -> BDE
-ACE -> BD
-ABCE -> D
+The list of non trivial dependencies : <br/>
+CDE -> B<br/>
+AB -> CDE<br/>
+AD -> BCE<br/>
+CE -> BD<br/>
+BCE -> D<br/>
+DE -> B<br/>
+D -> BE<br/>
+BD -> E<br/>
+ABCD -> E<br/>
+ABDE -> C<br/>
+ABD -> CE<br/>
+AC -> BDE<br/>
+BCD -> E<br/>
+CD -> BE<br/>
+ABC -> DE<br/>
+ADE -> BC<br/>
+ACD -> BE<br/>
+ABE -> CD<br/>
+ACDE -> B<br/>
+BC -> DE<br/>
+C -> BDE<br/>
+ACE -> BD<br/>
+ABCE -> D<br/>
 
-The list of bcnf violating functional dependencies : 
-CDE -> B
-CE -> BD
-BCE -> D
-DE -> B
-D -> BE
-BD -> E
-BCD -> E
-CD -> BE
-BC -> DE
-C -> BDE
+The list of bcnf violating functional dependencies : <br/>
+CDE -> B<br/>
+CE -> BD<br/>
+BCE -> D<br/>
+DE -> B<br/>
+D -> BE<br/>
+BD -> E<br/>
+BCD -> E<br/>
+CD -> BE<br/>
+BC -> DE<br/>
+C -> BDE<br/>
 
-The output of BCNF Decomposition:
+The output of BCNF Decomposition:<br/>
 
-[DE,CD,BDE,AC]
+[DE,CD,BDE,AC]<br/>
 
 
