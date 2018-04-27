@@ -78,7 +78,7 @@ public class Main {
 		try {
 
 			br = new BufferedReader(
-					new FileReader(new File("C:\\Users\\Shinigami\\eclipse-workspace\\Db Proj 2\\src\\input")));
+					new FileReader(new File("filePath")));
 
 			String strLine = br.readLine();
 
