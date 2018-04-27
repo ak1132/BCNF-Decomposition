@@ -1,13 +1,13 @@
 # BCNF-Decomposition
-A driver program to decompose a relation with violating functional dependencies into BCNF (Boyce Codd Normal Form)
+A driver program to decompose a relation with violating functional dependencies into BCNF (Boyce Codd Normal Form)<br/>
 
-Sample Input: 
-A B C D E
-A B -> C
-C -> D
-D -> B E
+Sample Input: <br/>
+A B C D E<br/>
+A B -> C<br/>
+C -> D<br/>
+D -> B E<br/>
 
-Output:
+Output:<br/>
 
 Relation : ABCDE<br/>
 
